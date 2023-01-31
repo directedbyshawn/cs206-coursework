@@ -1,6 +1,6 @@
 import pyrosim.pyrosim as pyrosim
 
-pyrosim.Start_SDF('boxes.sdf')
+pyrosim.Start_SDF('world.sdf')
 
 length = 1
 width = 1
@@ -10,15 +10,7 @@ x = 0
 y = 0
 z = 0.5
 
-for i in range(5):
-    for j in range(5):
-        length = width = height = 1
-        for k in range(10):
-            length = width = height = length * 0.9
-            pyrosim.Send_Cube(name=f'box{x}-{y}-{k+1}', pos=[x, y, z+k] , size=[length, width, height])
-        y += 1
-    x += 1
-    y = 0
+pyrosim.Send_Cube(name='box', pos=[x, y, z] , size=[length, width, height])
 
 
 pyrosim.End()
