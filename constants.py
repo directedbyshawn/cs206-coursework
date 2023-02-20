@@ -1,6 +1,6 @@
 import numpy as np
 
-ITERATIONS = 1000
+ITERATIONS = 100
 
 # Motor control settings for back leg
 amplitudeBL = np.pi/8
