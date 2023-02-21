@@ -9,10 +9,14 @@ class MOTOR:
         self.jointName = jointName
         self.values = np.zeros(c.ITERATIONS)
         self.Prepare_To_Act()
+        print(self.jointName)
 
     def Prepare_To_Act(self):
         self.amplitude = np.pi/8
-        self.frequency = 10
+        if self.jointName == b'Torso_BackLeg':
+            self.frequency = 5
+        else:
+            self.frequency = 10
         self.offset = 0
         self.motorValues = [self.amplitude * np.sin(self.frequency * x + self.offset) for x in np.linspace(0, 2*np.pi, c.ITERATIONS)]
 
