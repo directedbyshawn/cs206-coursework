@@ -18,6 +18,11 @@ class NEURAL_NETWORK:
 
         f.close()
 
+    def Update(self):
+        for neuronName in self.neurons:
+            if self.neurons[neuronName].Is_Sensor_Neuron():
+                self.neurons[neuronName].Update_Sensor_Neuron()
+
     def Print(self):
 
         self.Print_Sensor_Neuron_Values()
