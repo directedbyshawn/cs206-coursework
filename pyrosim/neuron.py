@@ -73,8 +73,6 @@ class NEURON:
 
         self.Set_Value(0)
 
-        print(self.Get_Value())
-
         for synapseName in synapses:
             assert type(synapseName) == tuple
             assert len(synapseName) == 2

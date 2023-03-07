@@ -1,6 +1,7 @@
 import numpy as np
 
-ITERATIONS = 1000
+ITERATIONS = 10000
+GRAV = -80
 
 # # Motor control settings for back leg
 # amplitudeBL = np.pi/8
@@ -17,4 +18,4 @@ SAVE_SENSOR_VALUES = False
 
 max_force = 500
 
-sleep = 1/60
+sleep = 1/600
