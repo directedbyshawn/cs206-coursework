@@ -1,6 +1,6 @@
 import numpy as np
 
-ITERATIONS = 10000
+ITERATIONS = 500
 GRAV = -80
 
 # # Motor control settings for back leg
