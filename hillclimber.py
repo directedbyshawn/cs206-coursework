@@ -1,6 +1,7 @@
 from solution import SOLUTION
 import constants as c
 import copy
+from time import sleep
 
 class HILL_CLIMBER:
 
@@ -16,7 +17,12 @@ class HILL_CLIMBER:
         self.Spawn()
         self.Mutate()
         self.child.Evaluate()
+        self.Print()
         self.Select()
+
+    def Print(self):
+        print(f'\n\nparent fitness: {self.parent.fitness}, child fitness: {self.child.fitness}\n\n')
+        sleep(3)
 
     def Spawn(self):
         self.child = copy.deepcopy(self.parent)
@@ -25,6 +31,7 @@ class HILL_CLIMBER:
         self.child.Mutate()
 
     def Select(self):
-        pass
+        if self.parent.fitness > self.child.fitness:
+            self.parent = self.child
 
     
