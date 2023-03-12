@@ -6,12 +6,15 @@ class SOLUTION:
 
     def __init__(self):
         self.weights = np.random.rand(3, 2) * 2 - 1
+        self.fitness = 0
 
     def Evaluate(self):
         self.Create_World()
         self.Generate_Body()
         self.Generate_Brain()
         os.system('python simulation.py')
+        with open('fitness.txt', 'r') as f:
+            self.fitness = float(f.readline())
 
     def Create_World(self):
 

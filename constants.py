@@ -3,6 +3,8 @@ import numpy as np
 ITERATIONS = 500
 GRAV = -80
 
+NUMBER_OF_GENERATIONS = 2
+
 # # Motor control settings for back leg
 # amplitudeBL = np.pi/8
 # frequencyBL = 10
