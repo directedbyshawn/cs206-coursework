@@ -32,9 +32,13 @@ class SIMULATION:
         if c.SAVE_SENSOR_VALUES:
             for sensor in self.robot.sensors.values():
                 sensor.Save_Values()
+
+    def Get_Fitness(self):
+        self.robot.Get_Fitness()
                 
 
 if __name__ == "__main__":
     simulation = SIMULATION()
     simulation.Run()
+    simulation.Get_Fitness()
         

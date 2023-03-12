@@ -40,3 +40,12 @@ class ROBOT:
                 for motor in self.motors.values():
                     if motor.jointName.decode('utf-8') == jointName:
                         motor.Set_Value(self.robotId, desiredAngle)
+
+    def Get_Fitness(self):
+        stateOfLinkZero = p.getLinkState(self.robotId, 0)
+        positionOfLinkZero = stateOfLinkZero[0]
+        x = positionOfLinkZero[0]
+        y = positionOfLinkZero[1]
+        z = positionOfLinkZero[2]
+        with open('fitness.txt', 'w') as f:
+            f.write(str(x))
