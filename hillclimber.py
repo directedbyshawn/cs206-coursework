@@ -22,7 +22,6 @@ class HILL_CLIMBER:
 
     def Print(self):
         print(f'\n\nparent fitness: {self.parent.fitness}, child fitness: {self.child.fitness}\n\n')
-        sleep(3)
 
     def Spawn(self):
         self.child = copy.deepcopy(self.parent)

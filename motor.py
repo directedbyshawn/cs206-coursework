@@ -8,7 +8,7 @@ class MOTOR:
     def __init__(self, jointName):
         self.jointName = jointName
         self.values = np.zeros(c.ITERATIONS)
-        print(self.jointName)
+        # print(self.jointName)
 
     def Set_Value(self, robotId, desiredAngle):
         pyrosim.Set_Motor_For_Joint(
